@@ -19,6 +19,13 @@ a {
     text-decoration: none;
 }
 
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* 숨김 콘텐츠 */
 .a11y-hidden {
     position: absolute;
@@ -30,3 +37,7 @@ a {
     overflow: hidden;
 }
 
+.App {
+    /*background: #eee;*/
+    min-height: 100vh;
+}

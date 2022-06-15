@@ -22,13 +22,20 @@ const NavCont = styled.nav`
 `;
 
 const Title = styled.h1`
+  color: #006AD5;
   font-size: 24px;
   font-weight: bold;
   margin: 0.25rem 0;
   cursor: pointer;
-
-  :hover {
-    color: lightcoral;
+  ::after {
+    content: "";
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-image: url("/assets/icon_01.png");
+    background-position: 0 -3px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 `;
 
@@ -89,7 +96,7 @@ const MenuLi = styled.li`
       border-radius: 5px;
 
       :hover {
-        background-color: lightcoral;
+        background-color: #006AD5;
         color: #fff;
       }
     }
@@ -97,14 +104,15 @@ const MenuLi = styled.li`
 `;
 
 const Header = () => {
-  const [menus, setMenus] = useState([
+  const menus = [
     { id: 0, title: "home" },
     { id: 1, title: "about" },
     { id: 2, title: "skills" },
     { id: 3, title: "work" },
     { id: 4, title: "testimonials" },
     { id: 5, title: "contact" },
-  ]);
+  ];
+
   const [BtnInfo, setBtnInfo] = useState(true);
 
   const menuClick = () => {
