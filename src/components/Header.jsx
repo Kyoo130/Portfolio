@@ -108,9 +108,8 @@ const Header = () => {
     { id: 0, title: "home" },
     { id: 1, title: "about" },
     { id: 2, title: "skills" },
-    { id: 3, title: "work" },
-    { id: 4, title: "testimonials" },
-    { id: 5, title: "contact" },
+    { id: 3, title: "projects" },
+    { id: 4, title: "career" },
   ];
 
   const [BtnInfo, setBtnInfo] = useState(true);

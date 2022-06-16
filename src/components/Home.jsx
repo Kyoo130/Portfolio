@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const HomeCont = styled.section`
   background: url("/assets/homebackground_01.png") center/cover no-repeat;
+  padding: 3rem 0;
 
   & div {
     display: flex;
@@ -11,9 +12,8 @@ const HomeCont = styled.section`
     align-items: center;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 2.5rem 0;
     color: #fff;
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
 `;
 const Title = styled.h2`

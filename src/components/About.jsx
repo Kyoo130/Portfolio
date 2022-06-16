@@ -7,6 +7,8 @@ import {
   faPhone,
   faEnvelope,
   faGraduationCap,
+  faCodeBranch,
+  faB,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -20,17 +22,8 @@ const Title = styled.h2`
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 3rem;
-
-  ::after {
-    content: "";
-    display: block;
-    width: 10rem;
-    height: 1.5px;
-    margin: 0.5rem auto 0;
-    border-radius: 5px;
-    background-color: #2a92d5;
-  }
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
 `;
 
 const AboutUl = styled.ul`
@@ -47,6 +40,13 @@ const AboutUl = styled.ul`
     flex-direction: inherit;
     justify-content: space-between;
     row-gap: 2.5rem;
+
+    :after {
+      display: block;
+      content: "";
+      width: 33.33%;
+      height: 100%;
+    }
   }
 `;
 
@@ -62,14 +62,15 @@ const AboutLi = styled.li`
 const AboutDiv = styled.div`
   display: flex;
   width: 100%;
-  max-width: 14rem;
+  max-width: 16.5rem;
   margin: 0 auto;
+  padding-left: 0.5rem;
 
   & svg {
     color: #2a92d5;
     width: 32px;
     height: 32px;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
   }
 
   & p {
@@ -80,6 +81,10 @@ const AboutDiv = styled.div`
   & strong {
     font-size: 1.2rem;
     font-weight: 600;
+  }
+
+  & a:hover {
+    color: #2a92d5;
   }
 `;
 
@@ -145,6 +150,38 @@ const About = () => {
               <strong>최종학력</strong>
               <br />
               국제대학교 졸업
+            </p>
+          </AboutDiv>
+        </AboutLi>
+        <AboutLi>
+          <AboutDiv>
+            <FontAwesomeIcon icon={faCodeBranch} />
+            <p>
+              <strong>깃헙</strong>
+              <br />
+              <a
+                href="https://github.com/Kyoo130"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/Kyoo130
+              </a>
+            </p>
+          </AboutDiv>
+        </AboutLi>
+        <AboutLi>
+          <AboutDiv>
+            <FontAwesomeIcon icon={faB} />
+            <p>
+              <strong>블로그</strong>
+              <br />
+              <a
+                href="https://velog.io/@kml9003"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://velog.io/@kml9003
+              </a>
             </p>
           </AboutDiv>
         </AboutLi>
