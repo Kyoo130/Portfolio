@@ -49,7 +49,7 @@ const MenuBtn = styled.button`
   & svg {
     width: 100%;
     height: 100%;
-    color: #181818;
+    color: #222;
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
