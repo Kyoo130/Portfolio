@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { projectData } from "../shared/projectData";
 
 const ProjectsCont = styled.section`
   background-color: #eee;
@@ -92,12 +93,14 @@ const Explanation = styled.p`
   text-align: center;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #bdbdbd;
+  line-height: 1.5;
 
   @media (min-width: 768px) {
     border: none;
     background-color: #eee;
     border-radius: 5px;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
+    white-space: pre-wrap;
   }
 `;
 
@@ -133,11 +136,11 @@ const BtnList = styled.div`
     border-radius: 5px;
     font-weight: 600;
   }
-  
+
   & a:hover {
     opacity: 0.925;
   }
-  
+
 `;
 
 const GitBtn = styled.a`
@@ -155,144 +158,68 @@ const Projects = () => {
     <ProjectsCont>
       <div>
         <Title>Projects</Title>
-        <Article>
-          <CardUl>
-            <li>
-              <strong>Image Community</strong>
-              <p>2022.05 (개인 프로젝트)</p>
-            </li>
-            <li>
-              <img src="/assets/project_01.png" alt="이미지커뮤니티" />
-              <Explanation>
-                이미지와 함께 게시글을 올리고 소식을 공유하며, <br />
-                소통할 수 있는 SNS 커뮤니티 서비스 입니다.
-              </Explanation>
-            </li>
-            <li>
-              <CardDl>
-                <div>
-                  <dt>사용 기술</dt>
-                  <dd>
-                    - React, Firebase, redux, redux-thunk, redux-actions, immer
-                  </dd>
-                </div>
+        {
+          projectData.map((project) => (
+            <Article key={project.id}>
+              <CardUl>
+                <li>
+                  <strong>{project.title}</strong>
+                  <p>{project.created_dt} ({project.type})</p>
+                </li>
+                <li>
+                  <img src={project.image} alt="이미지커뮤니티" />
+                  <Explanation>
+                    {project.summary}
+                  </Explanation>
+                </li>
+                <li>
+                  <CardDl>
+                    <div>
+                      <dt>사용 기술</dt>
+                      <dd>
+                        - {project.skills}
+                      </dd>
+                    </div>
 
-                <div>
-                  <dt>기능 구현</dt>
-                  <dd>- 회원가입, 로그인 기능 개발</dd>
-                  <dd>- 이미지 게시글 CRUD 기능 개발</dd>
-                  <dd>- 댓글 작성 및 삭제 기능 개발</dd>
-                  <dd>- 댓글 알림 기능 개발</dd>
-                  <dd>- 재사용성을 높인 최소 단위 컴포넌트 개발</dd>
-                  <dd>- 전역상태 관리(Redux) 사용 코드 개발</dd>
-                  <dd>- Firebase 서버 연동 코드 개발</dd>
-                </div>
+                    <div>
+                      <dt>기능 구현</dt>
+                      {project.description.map((item, idx) => (<dd key={idx}>- {item}</dd>))}
+                    </div>
 
-                <div>
-                  <dt>느낀점</dt>
-                  <dd>
-                    이미지와 함께 게시글을 공유하며, 다른 사람들과 소통할 수
-                    있는 SNS 커뮤니티 프로젝트 입니다. 이 프로젝트를 통해
-                    회원가입, 로그인 기능을 구현하여 Cookie, Session 개념을 배울
-                    수 있었으며, 코드 재사용성과 유지보수를 위한 구조적 고민을
-                    많이 하며 개발한 SNS 커뮤니티 프로젝트 입니다.
-                  </dd>
-                </div>
+                    <div>
+                      <dt>느낀점</dt>
+                      <dd>
+                        {project.result}
+                      </dd>
+                    </div>
 
-                <BtnList>
-                  <dt className="a11y-hidden">GitHub & 테스트 URL</dt>
-                  <dd>
-                    <GitBtn
-                      href="https://github.com/Kyoo130/image-community"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub
-                    </GitBtn>
-                  </dd>
-                  <dd>
-                    <UrlBtn
-                      href="https://image-community-43dff.firebaseapp.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      TEST URL
-                    </UrlBtn>
-                  </dd>
-                </BtnList>
-              </CardDl>
-            </li>
-          </CardUl>
-        </Article>
-        <Article>
-          <CardUl>
-            <li>
-              <strong>Image Community</strong>
-              <p>2022.05 (개인 프로젝트)</p>
-            </li>
-            <li>
-              <img src="/assets/project_01.png" alt="이미지커뮤니티" />
-              <Explanation>
-                이미지와 함께 게시글을 올리고 소식을 공유하며, <br />
-                소통할 수 있는 SNS 커뮤니티 서비스 입니다.
-              </Explanation>
-            </li>
-            <li>
-              <CardDl>
-                <div>
-                  <dt>사용 기술</dt>
-                  <dd>
-                    - React, Firebase, redux, redux-thunk, redux-actions, immer
-                  </dd>
-                </div>
-
-                <div>
-                  <dt>기능 구현</dt>
-                  <dd>- 회원가입, 로그인 기능 개발</dd>
-                  <dd>- 이미지 게시글 CRUD 기능 개발</dd>
-                  <dd>- 댓글 작성 및 삭제 기능 개발</dd>
-                  <dd>- 댓글 알림 기능 개발</dd>
-                  <dd>- 재사용성을 높인 최소 단위 컴포넌트 개발</dd>
-                  <dd>- 전역상태 관리(Redux) 사용 코드 개발</dd>
-                  <dd>- Firebase 서버 연동 코드 개발</dd>
-                </div>
-
-                <div>
-                  <dt>느낀점</dt>
-                  <dd>
-                    이미지와 함께 게시글을 공유하며, 다른 사람들과 소통할 수
-                    있는 SNS 커뮤니티 프로젝트 입니다. 이 프로젝트를 통해
-                    회원가입, 로그인 기능을 구현하여 Cookie, Session 개념을 배울
-                    수 있었으며, 코드 재사용성과 유지보수를 위한 구조적 고민을
-                    많이 하며 개발한 SNS 커뮤니티 프로젝트 입니다.
-                  </dd>
-                </div>
-
-                <BtnList>
-                  <dt className="a11y-hidden">GitHub & 테스트 URL</dt>
-                  <dd>
-                    <GitBtn
-                      href="https://github.com/Kyoo130/image-community"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub
-                    </GitBtn>
-                  </dd>
-                  <dd>
-                    <UrlBtn
-                      href="https://image-community-43dff.firebaseapp.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      TEST URL
-                    </UrlBtn>
-                  </dd>
-                </BtnList>
-              </CardDl>
-            </li>
-          </CardUl>
-        </Article>
+                    <BtnList>
+                      <dt className="a11y-hidden">GitHub & 테스트 URL</dt>
+                      <dd>
+                        <GitBtn
+                          href={project.github_url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub
+                        </GitBtn>
+                      </dd>
+                      <dd>
+                        <UrlBtn
+                          href={project.test_url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          TEST URL
+                        </UrlBtn>
+                      </dd>
+                    </BtnList>
+                  </CardDl>
+                </li>
+              </CardUl>
+            </Article>
+          ))
+        }
       </div>
     </ProjectsCont>
   );
