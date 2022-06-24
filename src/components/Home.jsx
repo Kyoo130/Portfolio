@@ -3,7 +3,8 @@ import styled, { keyframes } from "styled-components";
 
 const HomeCont = styled.section`
   background: url("/assets/homebackground_01.png") center/cover no-repeat;
-  padding: 3rem 0;
+  padding-top: calc(2rem + 3rem + 3rem);
+  padding-bottom: 3rem;
 
   & > div {
     display: flex;

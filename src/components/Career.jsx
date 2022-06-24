@@ -52,11 +52,7 @@ const SubTit = styled.h3`
   color: #006ad5;
   text-align: center;
   margin-bottom: 1.5rem;
-
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-
+  letter-spacing: 0.45rem;
 `;
 
 const ListCont = styled.dl`
@@ -101,7 +97,7 @@ const Career = () => {
         <Title>Career</Title>
 
         <article>
-          <SubTit>경 력</SubTit>
+          <SubTit>경력</SubTit>
           <ListCont>
             <div>
               <dt>
@@ -143,7 +139,7 @@ const Career = () => {
         </article>
 
         <article>
-          <SubTit>교 육</SubTit>
+          <SubTit>교육</SubTit>
           <ListCont>
             <div>
               <dt>
@@ -166,7 +162,7 @@ const Career = () => {
         </article>
 
         <article>
-          <SubTit>학 력</SubTit>
+          <SubTit>학력</SubTit>
           <ListUl>
             <li>
               <StrongEl>국제대학교 실용음악과</StrongEl>

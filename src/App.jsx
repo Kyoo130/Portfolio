@@ -28,7 +28,6 @@ function App() {
         <Skills />
         <Projects />
         <Career />
-        <Footer />
       </main>
       {
         openModal
@@ -38,6 +37,7 @@ function App() {
           />
         : null
       }
+      <Footer />
     </div>
   );
 }

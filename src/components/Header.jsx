@@ -6,8 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderCont = styled.header`
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
   box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+  z-index: 10;
 `;
 
 const NavCont = styled.nav`
@@ -17,16 +21,20 @@ const NavCont = styled.nav`
   align-items: center;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 1.2rem 2rem;
-  background-color: #fff;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 1.5rem 2rem 1.5rem;
+  }
+
 `;
 
 const Title = styled.h1`
   color: #006AD5;
   font-size: 24px;
   font-weight: bold;
-  margin: 0.25rem 0;
   cursor: pointer;
+
   ::after {
     content: "";
     display: inline-block;
@@ -58,14 +66,17 @@ const MenuBtn = styled.button`
 `;
 
 const MenuUl = styled.ul`
+  transition: max-height 0.3s ease;
+
   @media (min-width: 320px) and (max-width: 767px) {
-    display: ${(props) => (props.BtnInfo ? "none" : "block")};
+    display: flex;
+    visibility: ${(props) => (props.BtnInfo ? "hidden" : "visible")};
+    flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
+    max-height: ${(props) => (props.BtnInfo ? "0" : "30rem")};
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    background-color: #fff;
   }
   @media (min-width: 768px) {
     display: flex;
@@ -76,15 +87,16 @@ const MenuUl = styled.ul`
 const MenuLi = styled.li`
   cursor: pointer;
   @media (min-width: 320px) and (max-width: 767px) {
+    margin-top: 1.5rem;
+    
     & span {
       display: block;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding: 0.75rem 0;
       border-radius: 5px;
 
       :hover {
         color: #fff;
-        background-color: #bdbdbd;
+        background-color: #006AD5;
       }
     }
   }
@@ -109,7 +121,7 @@ const Header = () => {
     { id: 1, title: "about" },
     { id: 2, title: "skills" },
     { id: 3, title: "projects" },
-    { id: 4, title: "career" },
+    { id: 4, title: "career" }
   ];
 
   const [BtnInfo, setBtnInfo] = useState(true);

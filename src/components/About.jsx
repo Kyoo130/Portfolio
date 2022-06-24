@@ -55,6 +55,7 @@ const TestLi = styled.li`
     & > strong {
       font-size: 1.1rem;
       font-weight: 600;
+      letter-spacing: 0.2rem;
     }
 
     & > a:hover {
