@@ -7,12 +7,12 @@ export const projectData = [
     summary: "프론트엔드 개발자로서 저에 대한 경험과 \n커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다.",
     skills: "React, Styled-Components",
     description: [
-      "PC와 모바일 대응이 가능한 반응형 웹 페이지 개발",
+      "PC와 모바일 대응이 가능한 반응형 웹 적용",
       "웹 접근성을 고려한 마크업 적용",
-      "상단 메뉴 클릭 시 정보 페이지로 이동 스크롤 기능 개발",
+      "메뉴 클릭 시 정보 페이지로 이동 스크롤 기능 개발",
       "상세 정보를 확인할 수 있는 모달창 노출 기능 개발"
     ],
-    result: "이미지와 함께 게시글을 올리고 소식을 공유하며, 소통할 수 있는 SNS 커뮤니티 서비스 입니다. 이 프로젝트를 통해 로그인과 회원가입 기능을 구현하여 Cookie, Session 개념을 배울 수 있었고, 코드 재사용성과 유지보수를 위한 구조적 고민을 많이 하며 개발한 SNS 커뮤니티 프로젝트 입니다.",
+    result: "프론트엔드 개발자로서 저에 대한 경험과 커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다. 이 프로젝트를 통해 시각적인 것을 위한 마크업을 하는 것이 아니라, 웹 접근성을 고려하여 마크업 설계를 고민할 수 있었고, PC와 모바일 환경에서 모두 대응할 수 있도록 반응형 디자인을 적용한 프로젝트 입니다.",
     image: "/assets/project_00.png",
     github_url: "https://github.com/Kyoo130/image-community",
     test_url: "https://image-community-43dff.firebaseapp.com"
