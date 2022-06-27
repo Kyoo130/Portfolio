@@ -66,7 +66,7 @@ const TestLi = styled.li`
 
 const About = () => {
   return (
-    <AboutCont>
+    <AboutCont id={"about"}>
       <Title>About Me</Title>
       <ListCont>
         <TestLi>

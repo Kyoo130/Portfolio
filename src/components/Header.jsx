@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 const HeaderCont = styled.header`
   position: fixed;
@@ -88,8 +87,8 @@ const MenuLi = styled.li`
   cursor: pointer;
   @media (min-width: 320px) and (max-width: 767px) {
     margin-top: 1.5rem;
-    
-    & span {
+
+    & a {
       display: block;
       padding: 0.75rem 0;
       border-radius: 5px;
@@ -103,7 +102,7 @@ const MenuLi = styled.li`
 
   @media (min-width: 768px) {
     margin: 0 0.5rem;
-    & span {
+    & a {
       padding: 0.5rem 0.5rem;
       border-radius: 5px;
 
@@ -137,7 +136,11 @@ const Header = () => {
   return (
     <HeaderCont>
       <NavCont>
-        <Title>Kyoo's Portfolio</Title>
+        <Title>
+          <Link to="home" spy={true} smooth={true}>
+            Kyoo's Portfolio
+          </Link>
+        </Title>
         <MenuBtn onClick={menuClick}>
           {BtnInfo ? (
             <FontAwesomeIcon icon={faBars} />
@@ -148,7 +151,9 @@ const Header = () => {
         <MenuUl BtnInfo={BtnInfo}>
           {menus.map((menu) => (
             <MenuLi key={menu.id}>
-              <span>{menu.title}</span>
+              <Link to={menu.title} spy={true} smooth={true} offset={-64}>
+                {menu.title}
+              </Link>
             </MenuLi>
           ))}
         </MenuUl>

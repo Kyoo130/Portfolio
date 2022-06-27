@@ -92,7 +92,7 @@ const SmallEl = styled.small`
 
 const Career = () => {
   return (
-    <Section>
+    <Section id={"career"}>
       <div>
         <Title>Career</Title>
 

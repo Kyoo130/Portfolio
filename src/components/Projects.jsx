@@ -155,7 +155,7 @@ const UrlBtn = styled.a`
 
 const Projects = () => {
   return (
-    <ProjectsCont>
+    <ProjectsCont id="projects">
       <div>
         <Title>Projects</Title>
         {
