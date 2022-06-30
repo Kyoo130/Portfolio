@@ -72,7 +72,7 @@ const SkillsLi = styled.li`
 
 const Skills = () => {
   return (
-    <SkillsCont>
+    <SkillsCont id={"skills"}>
       <SkillsDiv>
         <Title>Skills</Title>
         <SkillsUl>

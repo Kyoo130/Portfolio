@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
+import Modal from "./Modal";
 
 const HomeCont = styled.section`
   background: url("/assets/homebackground_01.png") center/cover no-repeat;
-  padding: 3rem 0;
+  padding-top: calc(2rem + 3rem + 3rem);
+  padding-bottom: 3rem;
 
   & > div {
     display: flex;
@@ -113,9 +115,22 @@ const Btn = styled.button`
   }
 `;
 
-const Home = ({ openModalEvent }) => {
+const Home = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const handleModalOpen = (e) => {
+    setOpenModal(e);
+  };
+
+  useEffect(() => {
+    if(openModal === true) {
+      document.body.style.overflow = "hidden";
+    } else if(openModal === false) {
+      document.body.style.overflow = "unset";
+    }
+  }, [openModal])
+
   return (
-    <HomeCont>
+    <HomeCont id={"home"}>
       <div>
         <ProfileImg>
           <img src="/assets/profile_01.png" alt="profile" />
@@ -132,9 +147,16 @@ const Home = ({ openModalEvent }) => {
           <br />
         </Introduce>
         <BtnCont>
-          <Btn onClick={() => {openModalEvent(true)}}>더 알아보기</Btn>
+          <Btn onClick={() => {
+            handleModalOpen(true);
+          }}>더 알아보기</Btn>
           <span>👈 클릭해주세요!!!</span>
         </BtnCont>
+        {
+          openModal
+            ? <Modal handleModalOpen={handleModalOpen} />
+            : null
+        }
       </div>
     </HomeCont>
   );

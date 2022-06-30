@@ -6,6 +6,7 @@ const FooterCont = styled.footer`
   color: #fff;
   background-color: #222222;
   padding: 1.5rem 0;
+  margin-top: 3rem;
 
   @media (min-width: 768px) {
     padding: 2rem 0;
