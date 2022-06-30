@@ -22,6 +22,7 @@ const ModalContents = styled.div`
   background-color: #fff;
   color: #181818;
   overflow: scroll;
+  overflow-x: hidden;
 
   display: flex;
   flex-direction: column;
@@ -34,7 +35,9 @@ const ModalContents = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     height: auto;
+    max-height: 90%;
     white-space: pre-wrap;
   }
 `;

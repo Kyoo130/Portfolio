@@ -14,8 +14,8 @@ export const projectData = [
     ],
     result: "프론트엔드 개발자로서 저에 대한 경험과 커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다. 이 프로젝트를 통해 시각적인 것을 위한 마크업을 하는 것이 아니라, 웹 접근성을 고려하여 마크업 설계를 고민할 수 있었고, PC와 모바일 환경에서 모두 대응할 수 있도록 반응형 디자인을 적용한 프로젝트 입니다.",
     image: "/assets/project_00.png",
-    github_url: "https://github.com/Kyoo130/image-community",
-    test_url: "https://image-community-43dff.firebaseapp.com"
+    github_url: "https://github.com/Kyoo130/portfolio",
+    test_url: "https://portfolio-rose-xi.vercel.app"
   },
   {
     id: 1,
@@ -70,7 +70,7 @@ export const projectData = [
       "API 호출을 통해 Youtube 동영상 검색 기능 구현",
       "토글 버튼 클릭 시 테마 스타일 변경 기능 구현",
       "검색된 동영상이 없을 시 404 페이지 노출 구현",
-      "모바일 환경에서도 대응이 가능한 반응형 웹 구현",
+      "모바일 환경에서도 대응이 가능한 반응형 웹 구현"
     ],
     result: "YouTube API 를 활용하여 보고싶은 동영상을 검색하고 재생할 수 있는 클론 프로젝트 입니다. 이 프로젝트를 통해 Axios 라이브러리의 활용과 다크 모드 기능을 구현할 수 있었습니다. 추가적으로 모바일 환경에서도 대응이 가능하도록 반응형 웹 디자인을 적용하였습니다.",
     image: "/assets/project_03.png",
