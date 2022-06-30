@@ -8,7 +8,7 @@ export const projectData = [
     skills: "React, Styled-Components",
     description: [
       "PC와 모바일 대응이 가능한 반응형 웹 적용",
-      "웹 접근성을 고려한 마크업 적용",
+      "웹 접근성을 고려한 마크업 적용 (수정 중...)",
       "메뉴 클릭 시 정보 페이지로 이동 스크롤 기능 개발",
       "상세 정보를 확인할 수 있는 모달창 노출 기능 개발"
     ],
