@@ -8,8 +8,6 @@
 html {
     font-size: 16px;
     color: #181818;
-    /*color: #3A3838;*/
-    /*color: #222;*/
 }
 
 body {
@@ -40,7 +38,6 @@ button {
 }
 
 .App {
-    /*background: #eee;*/
     position: relative;
     min-height: 100vh;
 }
