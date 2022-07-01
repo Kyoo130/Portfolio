@@ -5,17 +5,17 @@ export const projectData = [
     created_dt: "2022.06",
     type: "개인 프로젝트",
     summary: "프론트엔드 개발자로서 저에 대한 경험과 \n커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다.",
-    skills: "React, Styled-Components",
+    skills: "React, Styled-Components, Font Awesome, React-scroll",
     description: [
       "PC와 모바일 대응이 가능한 반응형 웹 적용",
       "웹 접근성을 고려한 마크업 적용 (수정 중...)",
       "메뉴 클릭 시 정보 페이지로 이동 스크롤 기능 개발",
-      "상세 정보를 확인할 수 있는 모달창 노출 기능 개발"
+      "상세 정보를 확인할 수 있는 모달창 노출 기능 개발",
     ],
-    result: "프론트엔드 개발자로서 저에 대한 경험과 커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다. 이 프로젝트를 통해 시각적인 것을 위한 마크업을 하는 것이 아니라, 웹 접근성을 고려하여 마크업 설계를 고민할 수 있었고, PC와 모바일 환경에서 모두 대응할 수 있도록 반응형 디자인을 적용한 프로젝트 입니다.",
+    result: "프론트엔드 개발자로서 저에 대한 경험과 커리어를 소개할 수 있는 포트폴리오 프로젝트 입니다. 이 프로젝트를 통해 시각적인 것 기준이 아닌 웹 접근성을 고려한 마크업 설계를 고민할 수 있었고, PC와 모바일 환경에서 모두 대응할 수 있도록 반응형 디자인을 적용한 프로젝트 입니다.",
     image: "/assets/project_00.png",
     github_url: "https://github.com/Kyoo130/portfolio",
-    test_url: "https://portfolio-rose-xi.vercel.app"
+    test_url: "https://kyoo.co.kr"
   },
   {
     id: 1,
@@ -23,7 +23,7 @@ export const projectData = [
     created_dt: "2022.05",
     type: "개인 프로젝트",
     summary: "이미지와 함께 게시글을 올리고 소식을 공유하며, \n소통할 수 있는 SNS 커뮤니티 서비스 입니다.",
-    skills: "React, Styled-Components, Firebase, redux, Immer",
+    skills: "React, Styled-Components, Firebase, Redux, Immer",
     description: [
       "회원가입, 로그인 기능 개발",
       "이미지 게시글 CRUD 기능 개발",

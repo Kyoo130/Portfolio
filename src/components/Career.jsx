@@ -124,6 +124,7 @@ const Career = () => {
                 <StrongEl>트랜스코스모스코리아</StrongEl>
                 <SmallEl>2016.03 - 2017.11</SmallEl>
               </dt>
+              <dd>- 고객서비스 상담 및 VOC 민원 처리</dd>
               <dd>- 신입 사원 직무 교육 및 QA 담당</dd>
               <dd>- 내부 운영툴 및 CS 상담 가이드 제작</dd>
             </div>

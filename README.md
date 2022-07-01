@@ -30,7 +30,7 @@
 
 ### 🔗 배포 URL
 
-+ URL: https://portfolio-rose-xi.vercel.app
++ URL: https://kyoo.co.kr/
 
 <br/>
 

@@ -28,7 +28,7 @@ const Title = styled.h2`
 `;
 const Introduce = styled.p`
   font-size: 1.2rem;
-  line-height: 1.25;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 0.75rem;
 
@@ -122,12 +122,12 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if(openModal === true) {
+    if (openModal === true) {
       document.body.style.overflow = "hidden";
-    } else if(openModal === false) {
+    } else if (openModal === false) {
       document.body.style.overflow = "unset";
     }
-  }, [openModal])
+  }, [openModal]);
 
   return (
     <HomeCont id={"home"}>
@@ -137,14 +137,9 @@ const Home = () => {
         </ProfileImg>
         <Title>프론트엔드 개발자 포트폴리오</Title>
         <Introduce>
-          {
-            "안녕하세요. 서비스 운영 업무 경험이 있는 \n프론트엔드 개발자 이규민입니다.\n"
-          }
+          안녕하세요. 서비스 운영 업무 경험을 토대로 {"\n"}성장하고 싶은 개발자 이규민입니다.{"\n"}
           <br />
-          {
-            "고객 서비스부터 CS Solution 기획 \n및 운영에 대한 경험을 보유하고 있습니다."
-          }
-          <br />
+          고객 서비스 운영부터 CS Solution 고도화 기획 {"\n"}업무에 대한 경험을 보유하고 있습니다.
         </Introduce>
         <BtnCont>
           <Btn onClick={() => {
