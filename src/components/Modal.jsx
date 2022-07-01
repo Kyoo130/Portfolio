@@ -8,7 +8,7 @@ const ModalCont = styled.article`
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 2rem 1rem;
   z-index: 20;
 `;
 
@@ -76,6 +76,7 @@ const Contents = styled.p`
   background-color: #eee;
   padding: 1rem 1rem;
   border-radius: 0.5rem;
+  line-height: 1.5rem;
 `;
 
 const CloseBtn = styled.button`
