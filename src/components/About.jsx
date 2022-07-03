@@ -137,11 +137,11 @@ const About = () => {
             <strong>블로그</strong>
             <br />
             <a
-              href="https://velog.io/@kml9003"
+              href="https://kyoo130.tistory.com"
               target="_blank"
               rel="noreferrer"
             >
-              https://velog.io/@kml9003
+              https://kyoo130.tistory.com
             </a>
           </p>
         </TestLi>
